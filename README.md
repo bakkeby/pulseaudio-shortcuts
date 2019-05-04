@@ -21,5 +21,6 @@ These shell scripts handle some basic functionality such as increasing and decre
 #### pulseaudio\_toggle\_output.sh
 - toggles output, e.g. switches between audio going to headphones or speakers
 - if there are more than two audio output sources then the next one will be chosen randomly
+- note that changing the output sink through the command line interface can only take effect if [stream target device reading](https://www.freedesktop.org/wiki/Software/PulseAudio/Documentation/User/DefaultDevice/) is disabled which can be achieved by editing the corresponding line in `/etc/pulse/default.pa` to ```load-module module-stream-restore restore_device=false```
 
 Try these out on the command line first to confirm that they work on your system before adding them as keyboard shortcuts. Setup of shortcut bindings will depend on your window manager of choice.
